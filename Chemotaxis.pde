@@ -1,18 +1,18 @@
 Bacteria [] bob; 
-int a = 0;
+
  void setup()   
  {     
  	size(1000,1200);
 
- 	frameRate(30); 
+ 	frameRate(60); 
 
 	bob = new Bacteria[10];
 
 	for(int i=0; i < bob.length ; i++ ){
-	 	bob[i] = new Bacteria(75,i*50);
+	 	bob[i] = new Bacteria(75,i*60+70);
 	 	
 	}	
-
+	
  }   
  void draw()   
  {    
@@ -27,7 +27,6 @@ int a = 0;
  	for(int i=0; i < bob.length ; i++ ){
  		bob[i].move();
  		bob[i].show();
- 		a=i;
  		
  	}
 
@@ -48,16 +47,31 @@ int a = 0;
 
 
  	void move(){
- 		 myX = myX + (int)(Math.random()*5+1);
- 		 myY = myY + (int)(Math.random()*2);
+ 		 myX = myX + (int)(Math.random()*4-1);
+ 		 myY = myY + (int)(Math.random()*2-1);
  	}
  	void show(){
  		fill(255);
  		stroke(0);
- 		ellipse(myX,myY,40,40);
+ 		noStroke();
+ 		ellipse(myX,myY,50,50);
  		fill(255,0,0);
  		stroke(255,0,0);
- 		text(a ,myX, myY);
+ 		textAlign(CENTER);
+ 		textSize(10);
+ 		text(myY/60 ,myX, myY);
  	}
 
  }    
+
+
+/*
+ void mousePressed(){
+ 	if(dist(mouseX,mouseY, 75,100 < 50)){
+ 		betted = 1;
+ 	}
+
+ }
+*/
+
+
