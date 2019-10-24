@@ -3,11 +3,12 @@ boolean start = false;
 int [] arrayz = new int[10];
 int aa = 0;
 
+
  void setup()   
  {     
  	size(1000,1200);
 
- 	frameRate(15); 
+ 	frameRate(60); 
 
 	bob = new Bacteria[10];
 
@@ -22,6 +23,7 @@ int aa = 0;
  {    
  	background(0,200,0);
  	
+
  	rect(905,0,5,1200);
  	/*
  	int ax = (int)(Math.random()*40-20) + mouseX/2;
@@ -96,19 +98,27 @@ int aa = 0;
  		ellipse(myX,myY,30,14);
  		ellipse(myX+13,myY-14, 6,24);
  		ellipse(myX+16 , myY-20 , 14,8);
- 		if(frameCount%2==0){
+ 		if(frameCount%15>=1){
  			
  			ellipse(myX+15,myY+10,10,20);
  			ellipse(myX-15,myY+10,10,20);
  			
  		}
- 		if(frameCount%2==1){
- 			rotate(3*PI/2);
+
+ 		if(frameCount%15<1){
+ 			
  			translate(myX,myY);
- 			ellipse(15,10,10,20);
- 			ellipse(15,10,10,20);
+ 			rotate(PI/4);
+ 			//ellipse(myX+13,myY -10,10,20);
+ 			//ellipse(myX+16,myY-20,10,20);
+ 			ellipse(-10,13,10,20);
+ 			rotate(-PI/4);
+ 			rotate(-PI/4);
+ 			ellipse(10,20,10,20);
+ 			rotate(PI/4);
+ 			
  			translate(-myX,-myY);
- 			rotate(-3*PI/6);
+ 			
  		}
 
  		fill(255);
@@ -134,6 +144,4 @@ int aa = 0;
  	}
  	
  }
-
-
 
