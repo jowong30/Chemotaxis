@@ -125,7 +125,7 @@ int aa = 0;
  		stroke(255);
  		textAlign(CENTER);
  		textSize(10);
- 		text((int)myY/60 ,myX, myY+2);
+ 		text((int)(myY/60) ,myX, myY+2);
  	}
 
  }    
