@@ -6,7 +6,7 @@ int aa = 0;
 
  void setup()   
  {     
- 	size(1000,1200);
+ 	size(1000,650);
 
  	frameRate(60); 
 
@@ -125,7 +125,7 @@ int aa = 0;
  		stroke(255);
  		textAlign(CENTER);
  		textSize(10);
- 		text(myY/60 ,myX, myY+2);
+ 		text((int)myY/60 ,myX, myY+2);
  	}
 
  }    
